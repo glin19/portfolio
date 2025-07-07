@@ -44,34 +44,9 @@ export default function Home() {
     }))
   }
 
-  const validateForm = (): string | null => {
-    if (!formData.name.trim()) {
-      return "Please enter your name"
-    }
-    if (!formData.email.trim()) {
-      return "Please enter your email address"
-    }
-    if (!formData.email.includes('@')) {
-      return "Please enter a valid email address"
-    }
-    if (!formData.message.trim()) {
-      return "Please enter a message"
-    }
-    return null
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Validate form
-    const validationResult = validateForm()
-    if (validationResult) {
-      setValidationError(validationResult)
-      return
-    }
-    
-    // Clear any previous validation errors
-    setValidationError('')
     setIsSubmitting(true)
 
     const result = await submitContactForm(formData)
@@ -107,7 +82,7 @@ export default function Home() {
               Developer & Problem Solver
             </p>
             <p className="text-lg mb-12 text-gray-400 max-w-2xl mx-auto">
-              I create modern web applications with cutting-edge technologies. 
+              I create modern web applications with cutting edge technologies. 
               Passionate about code and innovative solutions.
             </p>
             
@@ -151,7 +126,7 @@ export default function Home() {
                 <div>
                   <div className="relative">
                     <img
-                      src="/AnthonyEdwards.jpg"
+                      src="/profile.jpeg"
                       alt="Guan Lin - Profile Picture"
                       className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
                     />
@@ -172,7 +147,7 @@ export default function Home() {
               {projects.map((project) => (
                 <Card 
                   key={project.id}
-                  className="bg-black/40 backdrop-blur-sm border border-white/20 overflow-hidden group hover:bg-black/60 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-xl"
+                  className="bg-black/40 backdrop-blur-sm border border-white/20 overflow-hidden group hover:bg-black/60 transition-all duration-300 cursor-pointer transform hover:scale-105"
                   onClick={() => openProjectModal(project)}
                 >
                   {/* Project Image */}
@@ -181,7 +156,7 @@ export default function Home() {
                       <img
                         src={project.images[0]}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-gray-400">
@@ -257,11 +232,7 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl font-bold mb-8 text-white">Get In Touch</h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Let's discuss your next project or just say hello!
-            </p>
-            
+            <h2 className="text-4xl font-bold mb-20 text-white">Contact Me</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="text-left">
                 <h3 className="text-2xl font-semibold mb-6 text-white">Contact Info</h3>
@@ -297,12 +268,6 @@ export default function Home() {
               </div>
               <div>
                 <Card className="bg-[#252525] border border-white p-6">
-                  {/* Validation Error */}
-                  {validationError && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                      {validationError}
-                    </div>
-                  )}
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <input
@@ -354,7 +319,7 @@ export default function Home() {
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#0165FC] hover:bg-[#0165FC] disabled:opacity-50 transform hover:scale-105 transition-transform duration-200"
+                      className="w-full bg-[#0165FC] hover:bg-[#0165FC] transform hover:scale-105"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>

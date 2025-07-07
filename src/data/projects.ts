@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'interactive-learning-web-application',
-    title: 'Interactive Learning Web Application',
+    title: 'Interactive Learning Web App',
     shortDescription: 'Web based application is an attempt to bridge the gap in communication by designing a convenient way to interact in a live lecture amongst a large classroom.',
     fullDescription: `
       Built an interactive learning tool as a web application geared towards professors to help
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       • Network Security: Private network inside ISU's network, SSl certificate ensuring encrypted connections over HTTPS and WSS
       • Testing: Frontend E2E testing using Cypress, Backend unit tests using Jest and integration tests using Postman
     `,
-    technologies: ['REACT', 'Node.js', 'Express.js', 'MySQL', 'CI/CD', 'Docker'],
+    technologies: ['React', 'Node.js', 'Express.js', 'MySQL', 'CI/CD', 'Docker'],
     images: [
       '/images/sdmay23-40-feature-page.png',
       '/images/sdmay23-40-course-page.png',
@@ -118,6 +118,38 @@ export const projects: Project[] = [
     ],
     githubUrl: 'https://github.com/glin19/todo-list-application',
     liveUrl: 'https://todo-list-application-lg.netlify.app/',
+    category: 'web',
+    completedDate: '2025-06'
+  },
+  {
+    id: 'portfolio-website',
+    title: 'Portfolio Website',
+    shortDescription: 'Todo list application built with JavaScript',
+    fullDescription: `
+      This is a todo list application made using Javascript. It has several features
+      including user authentication, todo lists, task filtering, and task 
+      editing/completion/deletion. It allows users to create an account, manage/create
+      their own todo lists and add tasks with priorities and due dates.
+
+      Features include:
+      • User Authentication: Secure login and registration
+      • Multiple Todo Lists: Create and manage separate todo lists 
+      • Task Management: Add, edit, complete, and delete tasks
+      • Filtering: Filter tasks y status, priority, and search terms
+      • Prioritization: Set low/medium/high priority on tasks
+      • Due Dates: Set and track task deadlines
+      • Search Bar: Search bar for better user experience
+      • Light/Dark Theme: Toggle between light and dark themes for better user experience
+    `,
+    technologies: ['Typescript', 'React', 'Tailwind CSS', 'Node.js'],
+    images: [
+      '/images/portfolio-hero.png',
+      '/images/portfolio-projects.png',
+      '/images/portfolio-contact-me.png',
+      '/images/portfolio-contact-submit.png'
+    ],
+    githubUrl: 'https://github.com/glin19/todo-list-application',
+    liveUrl: 'https://google.com/',
     category: 'web',
     completedDate: '2025-06'
   }

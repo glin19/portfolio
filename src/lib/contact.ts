@@ -8,10 +8,6 @@ export interface ContactFormData {
 
 export async function submitContactForm(data: ContactFormData) {
   try {
-    // Debug: Test Supabase connection
-    console.log('Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL)
-    console.log('Form data:', data)
-
     const { data: result, error } = await supabase
       .from('contacts')
       .insert([
