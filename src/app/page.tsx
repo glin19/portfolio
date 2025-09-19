@@ -75,7 +75,7 @@ export default function Home() {
         <section id="home" className="flex flex-col items-center justify-center min-h-screen px-4 pt-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-              Hi, I'm Guan
+              Hi, I&apos;m Guan
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Developer & Problem Solver
@@ -106,15 +106,10 @@ export default function Home() {
                 <div>
                   <h2 className="text-4xl font-bold text-center mb-16 text-white">About Me</h2>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    I'm a passionate full-stack developer with a love for creating elegant solutions to complex problems. 
+                    I&apos;m a passionate full-stack developer with a love for creating elegant solutions to complex problems. 
                     My journey in tech started with curiosity and has evolved into a career focused on building 
                     meaningful applications that make a difference.
-                  </p>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    When I'm not coding, you can find me exploring new technologies, contributing to open source projects, 
-                    or sharing knowledge with the developer community.
-                  </p>
-                  
+                  </p>       
                   <div className="flex flex-wrap gap-4">
                     <span className="bg-gray-600 text-white text-blue-300 px-3 py-1 rounded-full text-sm">Problem Solver</span>
                     <span className="bg-gray-600 text-white text-purple-300 px-3 py-1 rounded-full text-sm">Team Player</span>
